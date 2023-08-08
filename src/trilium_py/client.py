@@ -395,7 +395,7 @@ class ETAPI:
         prefix: str,
         notePosition: int,
         isExpanded: bool,
-        utcDateModified,
+        #utcDateModified,
     ) -> dict:
         # url = f'{self.server_url}/etapi/branches/{branchId}'
         url = f'{self.server_url}/etapi/branches/'
@@ -406,7 +406,7 @@ class ETAPI:
             "prefix": prefix,
             "notePosition": notePosition,
             "isExpanded": isExpanded,
-            "utcDateModified": utcDateModified,
+            #"utcDateModified": utcDateModified,
         }
         res = requests.post(url, json=clean_param(params), headers=self.get_header())
         return res.json()
