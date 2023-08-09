@@ -368,6 +368,7 @@ class ETAPI:
     def get_note_content(self, noteId: str) -> str:
         url = f'{self.server_url}/etapi/notes/{noteId}/content'
         res = requests.get(url, headers=self.get_header())
+        print(f"{res}")
         return res.content.decode('utf-8')
 
     def update_note_content(self, noteId: str, content: str) -> bool:
